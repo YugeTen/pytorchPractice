@@ -133,7 +133,8 @@ for epoch in range(num_epochs):
     save_image(denorm(fake_images), os.path.join(sample_dir, 'fake_images-{}.png'.format(epoch + 1)))
 
 # Save the model checkpoints
-torch.save({G.state_dict(),D.state_dict()}, 'model/8GAN_yunjey.ckpt')
+torch.save(G, 'model/8GAN_yunjey_G.pt')
+torch.save(D, 'model/8GAN_yunjey_D.pt')
 
 
 
